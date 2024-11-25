@@ -4,8 +4,7 @@ import numpy as np
 import joblib
 from pathlib import Path
 from data.preprocessing import DataPreprocessor
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error, r2_score
+
 
 
 class CarPriceModel(BaseEstimator, TransformerMixin):
@@ -22,7 +21,6 @@ class CarPriceModel(BaseEstimator, TransformerMixin):
         except Exception as e:
             raise Exception(f"Erro ao carregar o modelo: {str(e)}")
     
-
     
     def preprocess_data(self, data):
         """

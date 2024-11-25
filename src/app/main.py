@@ -1,7 +1,9 @@
 import streamlit as st
-from models.model import CarPriceModel
 import json
 from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).parent.parent))
+from models.model import CarPriceModel
 
 brand_models = {}
 
